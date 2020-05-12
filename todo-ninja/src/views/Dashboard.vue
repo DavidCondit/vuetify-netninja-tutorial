@@ -19,20 +19,35 @@
         </v-col>                              
       </v-row>
 
-      <v-row no-gutters>
+      <v-row class="mb-6" no-gutters>
         <v-col cols="12" md="6">
-          <v-btn outline block class="primary">1</v-btn>
+          <v-card class="pa-2" outlined tile>1</v-card>
         </v-col>
         <v-col cols="12" md="2">
-          <v-btn outline block class="primary">2</v-btn>
+          <v-card class="pa-2" outlined tile>2</v-card>
         </v-col>   
         <v-col cols="12" md="2">
-          <v-btn outline block class="primary">2</v-btn>
+          <v-card class="pa-2" outlined tile>2</v-card>
         </v-col>   
         <v-col cols="12" md="2">
-          <v-btn outline block class="primary">2</v-btn>
+          <v-card class="pa-2" outlined tile>2</v-card>
         </v-col>                              
       </v-row>      
+
+      <v-row class="mb-6" no-gutters>
+        <v-col cols="6" md="3">
+          <v-card class="pa-2" outlined tile>1</v-card>
+        </v-col>
+        <v-col cols="2" md="3">
+          <v-card class="pa-2" outlined tile>2</v-card>
+        </v-col>   
+        <v-col cols="2" md="3">
+          <v-card class="pa-2" outlined tile>2</v-card>
+        </v-col>   
+        <v-col cols="2" md="3">
+          <v-card class="pa-2" outlined tile>2</v-card>
+        </v-col>                              
+      </v-row>        
 
       <v-row>
         <v-col cols="4" md="3">
