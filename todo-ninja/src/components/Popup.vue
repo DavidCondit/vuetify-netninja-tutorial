@@ -21,11 +21,11 @@
 
             <v-menu>
                 <template v-slot:activator="{ on }">
-                    <v-text-field :value="due" v-on="on" label="Due date" prepend-icon="mdi-calendar-month"></v-text-field>
+                    <v-text-field :value="formattedDate" v-on="on" label="Due date" prepend-icon="mdi-calendar-month"></v-text-field>
                 </template>
                 <v-date-picker v-model="due"></v-date-picker>            
             </v-menu>
-
+        
             <v-btn text class="success mx-0 mt-3" @click="submit">Add project</v-btn>
           </v-form>
 
@@ -38,7 +38,10 @@
 </template>
 
 <script>
-export default {
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
+
+export default {  
     data() {
         return {
             title: '',
@@ -49,6 +52,11 @@ export default {
     methods: {
         submit() {
             console.log(this.title, this.content, this.due)
+        }
+    },
+    computed: {
+        formattedDate() {
+            return this.due ? format(parseISO(this.due), 'd MMM yyyy') : ''
         }
     }
 }
