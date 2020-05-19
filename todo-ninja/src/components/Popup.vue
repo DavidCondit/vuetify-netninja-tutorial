@@ -16,11 +16,19 @@
         <v-card-text>
 
           <v-form class="px-3">
-              <v-text-field label="Title" v-model="title" prepend-icon="mdi-folder"></v-text-field>
-              <v-textarea label="Information" v-model="content" prepend-icon="mdi-pencil"></v-textarea>
-              <v-btn text class="success mx-0 mt-3" @click="submit">Add project</v-btn>
+            <v-text-field label="Title" v-model="title" prepend-icon="mdi-folder"></v-text-field>
+            <v-textarea label="Information" v-model="content" prepend-icon="mdi-pencil"></v-textarea>
+
+            <v-menu>
+                <template v-slot:activator="{ on }">
+                    <v-text-field :value="due" v-on="on" label="Due date" prepend-icon="mdi-calendar-month"></v-text-field>
+                </template>
+                <v-date-picker v-model="due"></v-date-picker>            
+            </v-menu>
+
+            <v-btn text class="success mx-0 mt-3" @click="submit">Add project</v-btn>
           </v-form>
-          
+
         </v-card-text>
 
       </v-card>
@@ -34,12 +42,13 @@ export default {
     data() {
         return {
             title: '',
-            content: ''
+            content: '',
+            due: null
         }
     },
     methods: {
         submit() {
-            console.log(this.title, this.content)
+            console.log(this.title, this.content, this.due)
         }
     }
 }
