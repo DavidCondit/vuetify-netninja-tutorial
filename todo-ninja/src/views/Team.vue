@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <h1 class="subheading grey--text">Team</h1>
+    <h1 class="title grey--text">Team</h1>
 
     <v-container class="my-5">
       
@@ -13,7 +13,7 @@
               </v-avatar>
             </v-responsive>
             <v-card-text>
-              <div class="subheading">{{ person.name }}</div>
+              <div class="subtitle-1">{{ person.name }}</div>
               <div class="grey--text">{{ person.role }}</div>
             </v-card-text>
             <v-card-actions>

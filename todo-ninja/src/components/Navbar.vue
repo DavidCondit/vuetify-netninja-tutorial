@@ -7,7 +7,7 @@
                 <span>Ninja</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn flat color="grey" dark>
+            <v-btn text color="grey" dark>
                 <span>Sign Out</span>
                 <v-icon right>mdi-exit-to-app</v-icon>
             </v-btn>
@@ -15,7 +15,7 @@
 
         <v-navigation-drawer v-model="drawer" app temporary class="primary">
             <v-row class="mt-5">
-                <v-col cols=12>
+                <v-col cols=12 class="pb-0 mb-0">
                     <v-row justify="center" align-content="center">
                         <v-avatar size="100">
                             <img src="/avatar-1.png">
@@ -24,7 +24,7 @@
                 </v-col>
                 <v-col cols=12>
                     <v-row justify="center" align-content="center">
-                        <p class="white--text subheading mt-1">The Net Ninja</p>
+                        <p class="white--text subtitle-1 ma-0 pa-0">The Net Ninja</p>
                     </v-row>                    
                 </v-col>
             </v-row>
